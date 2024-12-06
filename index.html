@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light no-copy">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
               <img src="images/project/arsipNusa-logo.png" class="img-fluid logo" alt="Arsip Nusa Logo">
@@ -51,94 +53,96 @@
                     </li>
                 </ul>
 
-                <ul class="navbar-nav ml-lg-auto">
-                    <div class="ml-lg-4">
-                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                        <i class="color-mode-icon"></i>
-                        Color mode
+                <ul class="navbar-nav ml-lg-auto d-flex align-items-center">
+                  <div class="ml-lg-4">
+                    <div class="color-mode d-flex justify-content-center align-items-center">
+                      <div class="color-toggle" id="color-toggle">
+                        <img src="images/project/night.png" alt="Light Mode" class="color-mode-icon light-mode-icon">
+                        <img src="images/project/sun.png" alt="Dark Mode" class="color-mode-icon dark-mode-icon">
                       </div>
+                      <span class="ms-2 ml-2 no-copy" id="mode-text">Dark Mode</span>
                     </div>
+                  </div>
                 </ul>
+
+
             </div>
         </div>
     </nav>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <section data-aos="fade-up" data-aos-duration="1000" class="no-copy about full-screen d-lg-flex justify-content-center align-items-center" id="about">
         <div class="container">
-            <div class="row">
-                
-<div class="row align-items-center">
-  <div class="col-lg-7 col-md-12 col-sm-12">
-    <div class="about-text">
-      <small class="small-text">Welcome to my portfolio website!</small>
-      <h1 class="animated animated-text">
-        <span class="mr-2">Hey folks, I'm</span>
-        <div class="animated-info">
-          <span class="animated-item">Danny Lukmana</span>
-          <span class="animated-item">UI/UX Enthusiast</span>
-          <span class="animated-item">Fullstack Web Developer</span>
-          <span class="animated-item">Java Developer</span>
-        </div>
-      </h1>
+            <div class="row">      
+              <div class="row align-items-center">
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                  <div class="about-text">
+                    <small class="small-text">Welcome to my portfolio website!</small>
+                    <h1 class="animated animated-text">
+                      <span class="mr-2">Hey folks, I'm</span>
+                      <div class="animated-info">
+                        <span class="animated-item">Danny Lukmana</span>
+                        <span class="animated-item">UI/UX Enthusiast</span>
+                        <span class="animated-item">Fullstack Web Developer</span>
+                        <span class="animated-item">Java Developer</span>
+                      </div>
+                    </h1>
 
-      <p data-aos="fade-up" data-aos-duration="1000">
-        I am passionate about creating exceptional digital experiences, driven by the challenge of transforming ideas
-        into
-        successful products. With expertise in user experience design, intuitive interfaces, and cutting-edge web
-        development,
-        I bring creativity and precision to every project. As the creator of
-        <a href="https://arsipnusa.github.io/Landing-Page-Arsip-Nusa/" target="_blank" rel="noopener noreferrer"
-          class="custom-link brand-text">
-          Arsip Nusa
-        </a>, I have built a versatile website creator that empowers users to effortlessly design stunning website
-        templates.
-      </p>
+                    <p data-aos="fade-up" data-aos-duration="1000">
+                      I am passionate about creating exceptional digital experiences, driven by the challenge of transforming ideas
+                      into
+                      successful products. With expertise in user experience design, intuitive interfaces, and cutting-edge web
+                      development,
+                      I bring creativity and precision to every project. As the creator of
+                      <a href="https://arsipnusa.github.io/Landing-Page-Arsip-Nusa/" target="_blank" rel="noopener noreferrer"
+                        class="custom-link brand-text">
+                        Arsip Nusa
+                      </a>, I have built a versatile website creator that empowers users to effortlessly design stunning website
+                      templates.
+                    </p>
 
-      <div class="tech-icons mt-5 mb-5">
-        <i class="fab fa-postgresql fa-3x" title="PostgreSQL"></i>
-        <i class="fab fa-mysql fa-3x" title="MySQL"></i>
-        <i class="fab fa-html5 fa-3x" title="HTML"></i>
-        <i class="fas fa-database fa-3x" title="MongoDB"></i>
-        <i class="fab fa-java fa-3x" title="Java"></i>
-        <i class="fab fa-git-alt fa-3x" title="Spring Boot"></i>
-        <i class="fab fa-css3-alt fa-3x" title="CSS"></i>
-        <i class="fab fa-figma fa-3x" title="Figma"></i>
-        <i class="fab fa-laravel fa-3x" title="Laravel"></i>
-        <i class="fab fa-bootstrap fa-3x" title="Bootstrap"></i>
-        <i class="fab fa-react fa-3x" title="React"></i>
-        <i class="fab fa-js fa-3x" title="JavaScript"></i>
-        <i class="fab fa-php fa-3x" title="PHP"></i>
-        <i class="fab fa-vaadin fa-3x" title="Vaadin"></i>
-        <i class="fab fa-tailwindcss fa-3x" title="Tailwind"></i>
-        <i class="fab fa-bulma fa-3x" title="Bulma"></i>
-        <i class="fab fa-polymer fa-3x" title="Polymer"></i>
-      </div>
+                    <div class="tech-icons mt-5 mb-5">
+                      <i class="fab fa-postgresql fa-3x" title="PostgreSQL"></i>
+                      <i class="fab fa-mysql fa-3x" title="MySQL"></i>
+                      <i class="fab fa-html5 fa-3x" title="HTML"></i>
+                      <i class="fas fa-database fa-3x" title="MongoDB"></i>
+                      <i class="fab fa-java fa-3x" title="Java"></i>
+                      <i class="fab fa-git-alt fa-3x" title="Spring Boot"></i>
+                      <i class="fab fa-css3-alt fa-3x" title="CSS"></i>
+                      <i class="fab fa-figma fa-3x" title="Figma"></i>
+                      <i class="fab fa-laravel fa-3x" title="Laravel"></i>
+                      <i class="fab fa-bootstrap fa-3x" title="Bootstrap"></i>
+                      <i class="fab fa-react fa-3x" title="React"></i>
+                      <i class="fab fa-js fa-3x" title="JavaScript"></i>
+                      <i class="fab fa-php fa-3x" title="PHP"></i>
+                      <i class="fab fa-vaadin fa-3x" title="Vaadin"></i>
+                      <i class="fab fa-tailwindcss fa-3x" title="Tailwind"></i>
+                      <i class="fab fa-bulma fa-3x" title="Bulma"></i>
+                      <i class="fab fa-polymer fa-3x" title="Polymer"></i>
+                    </div>
 
-      <div class="custom-btn-group mt-4">
-        <a href="https://drive.google.com/file/d/1Euq_WIxyRx3besGSW8uN1AKth2W6CEcW/view?usp=sharing"
-          class="btn mr-lg-2 custom-btn" target="_blank" rel="noopener noreferrer">
-          <i class='uil uil-file-alt'></i> Download Resume
-        </a>
+                    <div class="custom-btn-group mt-4">
+                      <a href="https://drive.google.com/file/d/1Euq_WIxyRx3besGSW8uN1AKth2W6CEcW/view?usp=sharing"
+                        class="btn mr-lg-2 custom-btn" target="_blank" rel="noopener noreferrer">
+                        <i class='uil uil-file-alt'></i> Download Resume
+                      </a>
 
-        <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
-      </div>
-    </div>
-  </div>
+                      <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
+                    </div>
+                  </div>
+                </div>
 
-  <div class="col-lg-5 col-md-12 col-sm-12">
-    <div class="about-image svg">
-      <img src="images/undraw/10541562_18915856.svg" class="img-fluid" alt="svg image" style="border-radius: 30px;">
-    </div>
-  </div>
-</div>
-
-
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                  <div class="about-image svg">
+                    <img src="images/undraw/10541562_18915856.svg" class="img-fluid" alt="svg image" style="border-radius: 30px;">
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </section>
 
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="project py-5" id="project">
+    <section data-aos="fade-up" data-aos-duration="1000" class="no-copy project py-5" id="project">
       <div class="container">
         <div class="row">
           <div class="col-lg-11 text-center mx-auto col-12">
@@ -193,15 +197,12 @@
     </section>
 
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <section data-aos="fade-up" data-aos-duration="1000" class="no-copy resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-6 col-12">
                   <h2 class="mb-4">Experiences</h2>
-
                     <div class="timeline">
-
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
                                 <span>2022</span>
@@ -212,36 +213,42 @@
                                 issues, managed the codebase with GIT, and ensured cross-browser compatibility (Chrome, Firefox, Safari, Edge).</p>
                             </div>
                         </div>
-
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
                                 <span>2021</span>
                             </div>
-                            <div class="timeline-info">
-                                <h3><span>Rakamin Academy</h3>
-                                <p>Internship bootcamp with Alodokter as a full-stack developer make it website information of Alodokter.</p>
-                            </div>
+                              <div class="timeline-info">
+                                <h3><span>Rakamin Academy</span></h3>
+                                <p>Completed an internship bootcamp with Alodokter as a Full-Stack Developer, where I contributed to the design and
+                                  development of Alodokter's website. This involved creating a user-friendly and responsive platform to provide
+                                  medical information and services, ensuring seamless functionality and optimal user experience across all devices.
+                                  or more details my certificate, <a class="custom-link brand-text"
+                                    href="https://drive.google.com/file/d/10zUeH83DFiAWfDiEqUAmtCq5JzYhmthD/view?usp=sharing"
+                                    target="_blank"
+                                    rel="noopener noreferrer">Rakamin Academy Certificate</a>.</p>
+                              </div>
                         </div>
-                        
                         <div class="timeline-wrapper">
                             <div class="timeline-yr">
                                 <span>2021</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Telkom University<small>Hand Tremor Detection Using Quaternion Method for IMU Data</small></h3>
-                                <p>This study focuses on detecting arm tremors using the quaternion method, with results classified into tremor levels
+                              <h3><span>Telkom University<small style="margin: 0;">Hand Tremor Detection Using Quaternion Method for IMU Data</small></h3>
+                              <p>This study focuses on detecting arm tremors using the quaternion method, with results classified into tremor levels
                                 using fuzzy logic. Data was collected from accelerometers and gyroscopes on devices attached to the wrist and elbow,
                                 connected to Android-based systems. Experiments achieved 100% accuracy on 10 subjects, including five with medical
-                                tremors.</p>
+                                tremors. For more details, <a class="custom-link brand-text"
+                                  href="https://openlibrary.telkomuniversity.ac.id/home/catalog/id/174778/slug/deteksi-tremor-lengan-dengan-metode-quaternion-pada-data-imu.html"
+                                  target="_blank"
+                                  rel="noopener noreferrer">Open Library Tel-U</a>.</p>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                   <h2 class="mb-4 mobile-mt-2">Educations</h2>
-
                     <div class="timeline">
                         <div class="timeline-wrapper">
                              <div class="timeline-yr">
@@ -258,77 +265,78 @@
                                   my goals.</p>
                              </div>
                         </div>
-
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="contact py-5" id="contact">
+    <section data-aos="fade-up" data-aos-duration="1000" class="contact no-copy py-5" id="contact">
       <div class="container">
-<div class="row g-4">
-  <div class="col-lg-5 col-12">
-    <div class="contact-info d-flex flex-column justify-content-between align-items-start py-4 px-lg-5">
-<div class="contact-info-item mb-4 glass-ui">
-  <h3 class="mb-3 text-white">Say Hello 👋</h3>
-  <p class="footer-text mb-0">I’d love to hear from you! Reach out anytime, I’m just a message away.</p>
-  <p class="mb-0">📞 <a href="tel:+6282154853554" class="text-decoration-none">+62 821 5485 3554</a></p>
-  <p><a href="mailto:dannylukmana.business@gmail.com" class="text-decoration-none">dannylukmana.business@gmail.com</a></p>
-  <p class="footer-text">Let’s make something amazing together – Looking forward to hearing from you!</p>
-</div>
+        <div class="row g-4">
+          <div class="col-lg-5 col-12">
+            <div class="contact-info d-flex flex-column justify-content-between align-items-start py-4 px-lg-5">
+            <div class="contact-info-item mb-0">
+              <h4 class="mb-5 custom-font">I’d be thrilled to hear from you! Feel free to reach out anytime, I’m just a message away and happy to help!</h4>
+              <p class="mb-0"><a href="tel:+6282154853554">+62 821 5485 3554</a>
+              </p>
+              <p class="mb-5"><a href="mailto:dannylukmana.business@gmail.com"
+                  >dannylukmana.business@gmail.com</a>
+              </p>
+              <hr style="border-color: white; border-width: 1px; border-style: solid;">
 
+              <p class="footer-text mb-1 ">Let’s make something amazing together – Looking forward to hearing from you!</p>
+            </div>
 
-      <ul class="social-links d-flex gap-3">
-        <li><a href="https://github.com/dannylukmana" class="uil uil-code" data-toggle="tooltip" data-placement="left"
-            title="Github"></a></li>
-        <li><a href="https://www.instagram.com/dannylkmn28/" class="uil uil-instagram" data-toggle="tooltip"
-            data-placement="left" title="Instagram"></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-lg-6 col-12">
-    <div class="contact-form">
-      <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-      <form id="contact-form" action="" method="get">
-        <div class="row g-3">
-          <div class="col-lg-6 col-12">
-            <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+              <ul class="social-links d-flex gap-3" style="padding-left: 10px;">
+                <li><a href="https://github.com/dannylukmana" class="uil uil-code" data-toggle="tooltip" data-placement="left"
+                    title="Github"></a></li>
+                <li><a href="https://www.instagram.com/dannylkmn28/" class="uil uil-instagram" data-toggle="tooltip"
+                    data-placement="left" title="Instagram"></a></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="col-lg-6 col-12">
-            <input type="email" class="form-control" name="email" placeholder="Email" id="email">
-          </div>
+          <div class="col-lg-7 col-12">
+            <div class="contact-form">
+              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+              <form id="contact-form" action="" method="get">
+                <div class="row g-3">
+                  <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                  </div>
 
-          <div class="col-12">
-            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
-          </div>
+                  <div class="col-lg-6 col-12">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                  </div>
 
-          <div class="col-lg-5 col-12 ms-lg-auto">
-            <input type="submit" class="form-control submit-btn" value="Send Button">
+                  <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="col-lg-12 col-12 ms-lg-auto d-flex justify-content-end">
+                    <input type="submit" class="submit-btn btn custom-btn custom-btn-bg fire-btn" value="Send Message" onclick="confirmQuestion(event)">
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
-</div>
-
       </div>
+      <button id="scrollToTopBtn" class="btn btn-primary" title="Go to top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
     </section>
-     <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-lg-12 col-12">                                
-                        <p class="copyright-text text-center">Copyright &copy; 2024 Arsip Nusa . All rights reserved</p>
-                    </div>
-                    
-               </div>
+      <footer class="footer py-4 no-copy">
+        <div class="container text-center">
+          <div class="col-lg-12 col-12">
+            <p class="copyright-text text-center typing-animation">
+              Copyright &copy; 2024 Arsip Nusa & Danny Lukmana. All rights reserved
+            </p>
           </div>
-     </footer>
+        </div>
+      </footer>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -342,37 +350,61 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       AOS.init();
+
+      let mybutton = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = () => {
+        mybutton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      emailjs.init('0h5Ljv8FJT8NJUvGO');
+
+      function confirmQuestion(event) {
+        event.preventDefault();
+        Swal.fire({
+          title: '2 + 2 = 4, must be true',
+          text: 'Please confirm this statement before proceeding.',
+          icon: 'question',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, it\'s true!',
+          cancelButtonText: 'No, it\'s false!',
+          reverseButtons: true,
+          customClass: {
+            confirmButton: 'swal-btn-confirm',
+            cancelButton: 'swal-btn-cancel'
+          },
+          willOpen: () => {
+            document.querySelector('.swal-btn-confirm').style.backgroundColor = '#4f95cf';
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            sendEmail();
+          }
+        });
+      }
+
+      function sendEmail() {
+        const form = document.getElementById('contact-form');
+        emailjs.sendForm('service_rv70sym', 'template_s2cpmem', form)
+          .then((response) => {
+            console.log('SUCCESS!', response);
+            alert('Email berhasil dikirim!');
+            form.reset();
+          }, (error) => {
+            console.log('FAILED...', error);
+            alert('Gagal mengirim email.');
+          });
+      }
     </script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    emailjs.init('0h5Ljv8FJT8NJUvGO');
 
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    // Debugging
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-
-    // Mengirim email menggunakan EmailJS
-    emailjs.sendForm('service_rv70sym', 'template_s2cpmem', this)
-      .then(function (response) {
-        console.log('SUCCESS!', response);
-        alert('Email berhasil dikirim!');
-      }, function (error) {
-        console.log('FAILED...', error);
-        alert('Gagal mengirim email.');
-      });
-  });
-
-  </script>
+    
 
   </body>
 </html>

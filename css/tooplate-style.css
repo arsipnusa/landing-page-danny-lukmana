@@ -30,7 +30,7 @@ https://www.tooplate.com/view/2115-marvel
 
 .tech-icons i:hover {
   transform: scale(1.2); 
-  color: #03346E; 
+  color: #4f95cf; 
 }
 
 @media (max-width: 767px) {
@@ -40,7 +40,7 @@ https://www.tooplate.com/view/2115-marvel
 }
 .tech-tag {
   display: inline-block;
-  background-color: #03346E;
+  background-color: #4f95cf;
   color: white;
   padding: 2px 4px;
   border-radius: 5px;
@@ -48,12 +48,63 @@ https://www.tooplate.com/view/2115-marvel
   font-size: 0.9em;
 }
 
+    .project-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      
+    }
+  
+    .project-info img {
+      transition: transform 0.3s ease;
+    }
+  
+    .project-info:hover img {
+      transform: scale(0.98);
+    }
+
 
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
+  transition:  1.4s ease, color 1.4s ease;
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(0, 0, 0, 0.1);
+    /* Styling for non-Webkit browsers */
+    scrollbar-width: thin;
 }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      /* Width of the scrollbar */
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background: rgba(36, 56, 114, 0.4);
+      /* Glass-like translucent effect */
+      border-radius: 10px;
+      /* Rounded corners for smooth design */
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      /* Border for extra styling */
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.6);
+      /* Slightly brighter on hover */
+    }
+  
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      /* Light background track */
+      border-radius: 10px;
+    }
+
+
+
 
 .full-screen {
   padding: 4rem 0;
@@ -80,13 +131,34 @@ ul li {
   list-style: none;
 }
 
+
 a {
+  position: relative;
   font-weight: normal;
   text-decoration: none !important;
   transition: all 0.4s ease;
 }
 a:hover {
-  color: #03346E !important;
+  color: #4f95cf ;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Adjust thickness of the underline */
+  background-color: currentColor;
+  /* Use the text color */
+  transition: width 0.3s ease;
+  /* Add transition for smooth animation */
+}
+
+/* On hover, expand the underline from left to right */
+a:hover::after {
+  width: 100%;
 }
 
 .navbar-brand .uil {
@@ -128,6 +200,8 @@ h2 {
   font-weight: bold;
 }
 
+
+
 h3 {
   color: #484848;
 }
@@ -149,15 +223,54 @@ b, strong {
   transition: all 0.4s ease;
 }
 .custom-btn:hover {
-  color: #03346E;
+  color: #4f95cf;
 }
 .custom-btn.custom-btn-bg {
-  background: #474559;
+  background: #4f95cf;
   color: #ffffff;
 }
 .custom-btn.custom-btn-bg:hover {
-  background: #03346E;
+  background: #4f95cf;
   color: #ffffff !important;
+}
+
+/* Add this CSS to create the fire effect */
+.fire-btn {
+  position: relative;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.fire-btn:hover {
+  animation: fire 1s infinite;
+}
+
+@keyframes fire {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6), 0 0 20px rgba(0, 123, 255, 0.7);
+    transform: scale(1);
+  }
+
+  25% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8), 0 0 25px rgba(0, 123, 255, 0.9);
+    transform: scale(1.05);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 1);
+    transform: scale(1);
+  }
+
+  75% {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8), 0 0 25px rgba(0, 123, 255, 0.7);
+    transform: scale(1.05);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6), 0 0 20px rgba(0, 123, 255, 0.7);
+    transform: scale(1);
+  }
 }
 
 .animated {
@@ -173,7 +286,7 @@ b, strong {
 }
 
 .animated-item {
-  color: #03346E;
+  color: #4f95cf;
 }
 
 .animated-item {
@@ -188,6 +301,10 @@ b, strong {
   left: 0;
   animation: BottomTotop 8s linear infinite 0s;
 }
+        .custom-font {
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.5px;
+        }
 
 .animated-item:nth-child(1) {
   animation-delay: 0s;
@@ -275,11 +392,28 @@ b, strong {
 .owl-carousel .item {
   transition: transform 0.8s ease;
 }
+.no-copy {
+  user-select: none;
+}
 
 .custom-link {
   color: #000;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Hide the dark mode icon initially */
+.dark-mode-icon {
+  display: none;
+}
+
+/* Show the dark mode icon when the body is in dark mode */
+body.dark-mode .light-mode-icon {
+  display: none;
+}
+
+body.dark-mode .dark-mode-icon {
+  display: inline-block;
 }
 
 .dark-mode .custom-link {
@@ -354,7 +488,7 @@ b, strong {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #03346E;
+  color: #4f95cf;
   font-weight: bold;
 }
 .navbar-light .navbar-nav .nav-link:focus span,
@@ -429,6 +563,8 @@ b, strong {
   color: #ffffff;
 }
 
+
+
 .dark-mode {
   background: #11120D;
 }
@@ -436,14 +572,13 @@ b, strong {
   color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #03346E;
+  color: #4f95cf;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #11120D;
   border-bottom: 1px solid #1f1f1f;
 }
 .dark-mode .small-text {
-  background: #0d0c15;
   color: #ffffff;
 }
 .dark-mode .feature-card .uil,
@@ -467,7 +602,7 @@ b, strong {
 }
 .timeline-wrapper:before {
   content: "";
-  background: #474559;
+  background: #4f95cf;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -475,7 +610,7 @@ b, strong {
 }
 
 .timeline-yr {
-  background: #474559;
+  background: #4f95cf;
   border-radius: 100%;
   position: absolute;
   width: 75px;
@@ -498,7 +633,7 @@ b, strong {
   margin-left: 6em;
 }
 .timeline-info small {
-  color: #474559;
+  color: #4f95cf;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -538,7 +673,7 @@ b, strong {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #03346E;
+  color: #4f95cf;
 }
 .owl-theme .owl-dots .owl-dot {
   outline: none;
@@ -584,9 +719,137 @@ b, strong {
       font-size: 1rem;
     }
 
+        .contact-info-item {
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.6;
+          color: #fff;
+          /* White text color */
+          font-size: 1rem;
+          padding: 20px;
+        }
+    
+        /* Style for the section heading */
+        .contact-info-item h3 {
+          font-size: 1.75rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+    
+        /* Style for paragraph text */
+        .contact-info-item p {
+          font-size: 1rem;
+          margin-bottom: 10px;
+          color: #ccc;
+          /* Light grey text for paragraphs */
+        }
+    
+        /* For links in paragraphs */
+        .contact-info-item a {
+          color: #4CAF50;
+          /* Green color for links */
+          text-decoration: none;
+        }
+    
+        .contact-info-item a:hover {
+          text-decoration: underline;
+        }
+    
+        /* Larger font size for phone number and email */
+        .contact-info-item ,
+        .contact-info-item strong {
+          font-size: 1.1rem;
+          /* Slightly larger for emphasis */
+        }
+
+                #scrollToTopBtn {
+                  position: fixed;
+                  bottom: 20px;
+                  right: 20px;
+                  z-index: 100;
+                  display: none;
+                  /* Hidden by default */
+                  border: none;
+                  background-color: #007bff;
+                  color: white;
+                  border-radius: 80px;
+                  padding: 10px 15px;
+                  font-size: 20px;
+                  cursor: pointer;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+        
+                #scrollToTopBtn:hover {
+                  background-color: #0056b3;
+                }
+
+.typing-animation {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #333;
+  /* Cursor effect */
+  width: 0;
+  animation: typing 4s steps(40) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .contact-form {
   position: relative;
 }
+
+    .form-control {
+      border: none;
+      /* Remove default border */
+      border-bottom: 2px solid #ccc;
+      /* Line-style border at the bottom */
+      border-radius: 0;
+      /* No rounded corners */
+      padding: 10px 0;
+      /* Vertical padding for clean look */
+      font-size: 16px;
+      width: 100%;
+      /* Full width */
+      transition: all 0.3s ease;
+      /* Smooth transition for effects */
+    }
+  
+    /* Focus effect (when user interacts with input fields) */
+    .form-control:focus {
+      border-bottom: 2px solid #007bff;
+      /* Change bottom border color to blue when focused */
+      outline: none;
+      /* Remove default outline */
+      box-shadow: none;
+      /* No shadow effect */
+    }
+  
+    /* Placeholder style */
+    .form-control::placeholder {
+      color: #aaa;
+      /* Lighter placeholder color */
+    }
+            textarea.form-control:focus {
+              border-bottom: 2px solid #007bff;
+              /* Same effect for textarea */
+            }
+
 .contact-form .form-control {
   background: transparent;
   border-radius: 2px;
@@ -599,10 +862,10 @@ b, strong {
   height: 48px;
 }
 .contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #03346E;
+  border-color: #4f95cf;
 }
 .contact-form .submit-btn {
-  background: #03346E;
+  background: #4f95cf;
   border-radius: 8px;
   color: #ffffff;
   font-weight: bold;
@@ -611,11 +874,11 @@ b, strong {
   transition: all 0.4s ease;
 }
 .contact-form .submit-btn:hover {
-  background: #474559;
+  background: #4f95cf;
 }
 
 .contact-info {
-  background: #474559;
+  background: #4f95cf;
   border-radius: 10px;
   position: relative;
   bottom: 8px;
@@ -632,7 +895,7 @@ b, strong {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #03346E;
+  color: hsl(0, 0%, 100%);
 }
 
 @media (min-width: 1270px) {

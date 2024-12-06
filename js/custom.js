@@ -5,6 +5,14 @@
   $(".color-mode").click(function () {
     $(".color-mode-icon").toggleClass("active");
     $("body").toggleClass("dark-mode");
+
+    // Change the text based on the current mode
+    const modeText = $("#mode-text");
+    if ($("body").hasClass("dark-mode")) {
+      modeText.text("Light Mode"); // Change text to Light Mode when dark mode is active
+    } else {
+      modeText.text("Dark Mode");
+    }
   });
 
   // HEADER
@@ -34,11 +42,10 @@
       .join(" ");
 
     Swal.fire({
-      title: "Project Details",
       html: `
-        <p style="color:black;font-size:14px;"><strong>Description:</strong> ${description}</p>
-        <p style="color:black;font-size:14px;"><strong>Technology:</strong> ${technologyTags}</p>
-        <p style="color:black;font-size:14px;"><strong>Link:</strong> <a href="${link}" target="_blank">${link}</a></p>
+        <p style="color:black;font-size:14px;user-select: none;"><strong>Description:</strong> ${description}</p>
+        <p style="color:black;font-size:14px;user-select: none;"><strong>Technology:</strong> ${technologyTags}</p>
+        <p style="color:black;font-size:14px;user-select: none;"><strong>Link:</strong> <a href="${link}" target="_blank">${link}</a></p>
       `,
       imageUrl: $(this).attr("src"),
       imageWidth: 300,
@@ -46,6 +53,14 @@
       imageAlt: "Project Image",
       showCloseButton: true,
       focusConfirm: false,
+      customClass: {
+        confirmButton: "swal-btn-confirm",
+        cancelButton: "swal-btn-cancel",
+      },
+      willOpen: () => {
+        document.querySelector(".swal-btn-confirm").style.backgroundColor =
+          "#4f95cf";
+      },
     });
   });
 
