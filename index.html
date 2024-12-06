@@ -293,7 +293,7 @@
     <div class="contact-form">
       <h2 class="mb-4">Interested to work together? Let's talk</h2>
 
-      <form action="" method="get">
+      <form id="contact-form" action="" method="get">
         <div class="row g-3">
           <div class="col-lg-6 col-12">
             <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
@@ -345,6 +345,34 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init('0h5Ljv8FJT8NJUvGO');
+
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Debugging
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
+
+    // Mengirim email menggunakan EmailJS
+    emailjs.sendForm('service_rv70sym', 'template_s2cpmem', this)
+      .then(function (response) {
+        console.log('SUCCESS!', response);
+        alert('Email berhasil dikirim!');
+      }, function (error) {
+        console.log('FAILED...', error);
+        alert('Gagal mengirim email.');
+      });
+  });
+
+  </script>
 
   </body>
 </html>
