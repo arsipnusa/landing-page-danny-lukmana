@@ -555,6 +555,35 @@ b, strong {
   width: 100%;
 }
 
+    .glass-ui {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  
+    .glass-ui h3,
+    .glass-ui p {
+      color: white;
+    }
+  
+    .glass-ui a {
+      color: #0d6efd;
+      transition: color 0.3s ease;
+    }
+  
+    .glass-ui a:hover {
+      color: #004085;
+    }
+  
+    .footer-text {
+      font-size: 1rem;
+    }
+
 .contact-form {
   position: relative;
 }
@@ -587,9 +616,10 @@ b, strong {
 
 .contact-info {
   background: #474559;
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px;
   position: relative;
   bottom: 8px;
+  height: 100%;
 }
 .contact-info p, .contact-info a {
   color: #f7f3f3;
