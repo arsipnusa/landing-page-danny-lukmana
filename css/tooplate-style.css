@@ -780,4 +780,23 @@ b, strong {
     display: inline-block;
     vertical-align: top;
   }
+
+    /* Add this to your CSS file or in a <style> tag */
+    .paragraph {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+    .paragraph.visible {
+      opacity: 1;
+    }
+  
+    /* Optional: Apply a delay to stagger the visibility */
+    .paragraph:nth-child(odd) {
+      transition-delay: 0.2s;
+    }
+  
+    .paragraph:nth-child(even) {
+      transition-delay: 0.4s;
+    }
 }

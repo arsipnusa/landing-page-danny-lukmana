@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
 
@@ -62,7 +63,7 @@
         </div>
     </nav>
 
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <section data-aos="fade-up" data-aos-duration="1000" class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
         <div class="container">
             <div class="row">
                 
@@ -80,7 +81,7 @@
         </div>
       </h1>
 
-      <p>
+      <p data-aos="fade-up" data-aos-duration="1000">
         I am passionate about creating exceptional digital experiences, driven by the challenge of transforming ideas
         into
         successful products. With expertise in user experience design, intuitive interfaces, and cutting-edge web
@@ -137,12 +138,12 @@
     </section>
 
 
-    <section class="project py-5" id="project">
+    <section data-aos="fade-up" data-aos-duration="1000" class="project py-5" id="project">
       <div class="container">
         <div class="row">
           <div class="col-lg-11 text-center mx-auto col-12">
             <div class="col-lg-8 mx-auto">
-              <h2>Things I have designed for digital media agencies</h2>
+              <h2 data-aos="fade-up" data-aos-duration="1000">Things I have designed for digital media agencies</h2>
             </div>
             <div id="project-carousel" class="owl-carousel owl-theme" style="cursor: pointer;">
               <div class="item">
@@ -192,7 +193,7 @@
     </section>
 
 
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <section data-aos="fade-up" data-aos-duration="1000" class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
         <div class="container">
             <div class="row">
 
@@ -265,7 +266,7 @@
         </div>
     </section>
 
-    <section class="contact py-5" id="contact">
+    <section data-aos="fade-up" data-aos-duration="1000" class="contact py-5" id="contact">
       <div class="container">
 <div class="row g-4">
   <div class="col-lg-5 col-12">
@@ -274,8 +275,7 @@
   <h3 class="mb-3 text-white">Say Hello 👋</h3>
   <p class="footer-text mb-0">I’d love to hear from you! Reach out anytime, I’m just a message away.</p>
   <p class="mb-0">📞 <a href="tel:+6282154853554" class="text-decoration-none">+62 821 5485 3554</a></p>
-  <p><a href="mailto:dannylukmana.business@gmail.com" class="text-decoration-none">dannylukmana.business@gmail.com</a>
-  </p>
+  <p><a href="mailto:dannylukmana.business@gmail.com" class="text-decoration-none">dannylukmana.business@gmail.com</a></p>
   <p class="footer-text">Let’s make something amazing together – Looking forward to hearing from you!</p>
 </div>
 
@@ -341,7 +341,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
   </body>
 </html>
