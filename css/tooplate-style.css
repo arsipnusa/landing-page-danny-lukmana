@@ -968,6 +968,7 @@ body.dark-mode .dark-mode-icon {
   }
 }
 @media (max-width: 767px) {
+  
   h1 {
     font-size: 2.4em;
   }
@@ -986,10 +987,23 @@ body.dark-mode .dark-mode-icon {
     padding-bottom: 20px;
   }
 
+        .dark-mode .navbar-collapse {
+          background: #11120D;
+          text-align: center;
+          padding-bottom: 20px;
+        }
+
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
   }
+  
 }
+
+
+
+
+
+
 @media (max-width: 580px) {
 	.animated-info {
 		min-width: 200px;
